@@ -1,0 +1,83 @@
+body {
+  font-family: "Inter", Arial, sans-serif;
+  margin: 20px;
+  background: #fdfdfd;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+#filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#filters input, #filters select, #filters button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#filters button {
+  background: #007bff;
+  color: white;
+  border: none;
+}
+
+#filters button:hover {
+  background: #0056b3;
+}
+
+.table-container {
+  max-width: 100%;
+  overflow-x: auto;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-radius: 6px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+thead {
+  background: #f8f9fa;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+th, td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  white-space: nowrap;
+}
+
+th {
+  font-weight: 600;
+  cursor: pointer;
+  color: #555;
+}
+
+tr:hover {
+  background: #f5faff;
+}
+
+tr:nth-child(even) {
+  background: #fafafa;
+}
+
+td[contenteditable="true"] {
+  background: #fffbe6;
+  outline: none;
+}
