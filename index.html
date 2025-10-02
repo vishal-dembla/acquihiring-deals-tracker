@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Startup Acquisition Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Startup Acquisition Tracker</h1>
+
+  <!-- Filters -->
+  <div id="filters">
+    <input type="text" id="searchStartup" placeholder="🔍 Search Startup...">
+    <select id="filterIndustry">
+      <option value="">All Industries</option>
+      <option value="Fintech">Fintech</option>
+      <option value="AI">AI</option>
+      <option value="Airline">Airline</option>
+      <option value="Product">Product Engineering</option>
+    </select>
+  </div>
+
+  <!-- Airtable-style Table -->
+  <div class="table-container">
+    <table id="trackerTable">
+      <thead>
+        <tr>
+          <th data-col="startup">Startup ⬍</th>
+          <th data-col="acquiredBy">Acquired By ⬍</th>
+          <th data-col="industry">Industry ⬍</th>
+          <th data-col="employees">Employees ⬍</th>
+          <th data-col="info">Other Info ⬍</th>
+          <th data-col="date">Deal Date ⬍</th>
+          <th data-col="source">Source ⬍</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <!-- Populated via JS -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
