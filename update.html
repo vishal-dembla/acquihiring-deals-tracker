@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Deals</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Update Acquihiring Tracker</h1>
+
+  <form id="dealForm">
+    <input type="text" id="startup" placeholder="Startup" required>
+    <input type="text" id="acquiredBy" placeholder="Acquired By" required>
+    <input type="text" id="industry" placeholder="Industry" required>
+    <input type="text" id="employees" placeholder="Employees">
+    <input type="text" id="info" placeholder="Other Info">
+    <input type="date" id="date">
+    <input type="text" id="source" placeholder="Source">
+    <button type="submit">Generate JSON</button>
+  </form>
+
+  <h3>Generated JSON Snippet</h3>
+  <textarea id="output" rows="10" cols="80"></textarea>
+
+  <script>
+    document.getElementById("dealForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const newDeal = {
+        startup: document.getElementById("startup").value,
+        acquiredBy: document.getElementById("acquiredBy").value,
+        industry: document.getElementById("industry").value,
+        employees: document.getElementById("employees").value,
+        info: document.getElementById("info").value,
+        date: document.getElementById("date").value,
+        source: document.getElementById("source").value
+      };
+      document.getElementById("output").value = JSON.stringify(newDeal, null, 2) + ",";
+    });
+  </script>
+</body>
+</html>
